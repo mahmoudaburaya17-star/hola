@@ -122,7 +122,7 @@ def main(audio, out):
         c = f"{work}/c{i:03d}.mp4"
         tmp = f"{work}/c{i:03d}.tmp.mp4"
         subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-framerate", "30", "-i", f"{work}/s{i:03d}.jpg",
-            "-vf", f"format=yuv420p,loop=-1:1,trim=duration={d},setpts=PTS-STARTPTS,fade=t=in:st=0:d=0.08",
+            "-vf", f"format=yuv420p,loop=-1:1,trim=duration={d},setpts=PTS-STARTPTS",
             "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-r", "30", tmp])
         os.rename(tmp, c); clips.append(c)
     open(f"{work}/list.txt", "w").write("".join(f"file '{c}'\n" for c in clips))
