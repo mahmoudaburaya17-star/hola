@@ -32,6 +32,25 @@ DAYS[8] = {
  "quiz": quiz("«أخت» بالإسباني؟", [("A", "Hermano"), ("B", "Hermana"), ("C", "Abuela")]),
 }
 
+DAYS[9] = {
+ "lesson-1": cover("تعالى أوريك", "بيتي", "بالإسباني", "Mi casa"),
+ "lesson-2": cards("رحّب بضيوفك", [("¡Bienvenido a mi casa!", "أهلاً بيك في بيتي!"), ("Mi casa tiene tres habitaciones.", "بيتي فيه 3 غرف")],
+                   f"{lt('habitación')} = غرفة"),
+ "lesson-3": rows("أجزاء البيت", [("البيت", "la casa"), ("المطبخ", "la cocina"), ("الحمام", "el baño"),
+                                  ("أوضة النوم", "el dormitorio")]),
+ "lesson-4": cards("hay ولا está؟", [("Hay un jardín.", "فيه جنينة"), ("La cocina está allí.", "المطبخ هناك")],
+                   f"{lt('hay')} لوجود الشيء، و{lt('está')} لمكانه"),
+ "carousel-1": cover("أجزاء البيت", "بالإسباني", "", "اسحب ←"),
+ "carousel-2": rows("1", [("البيت", "la casa"), ("المطبخ", "la cocina")]),
+ "carousel-3": rows("2", [("الحمام", "el baño"), ("أوضة النوم", "el dormitorio")]),
+ "carousel-4": rows("3", [("الصالون", "el salón"), ("الجنينة", "el jardín")]),
+ "carousel-5": cards("اسأل", [("¿Dónde está la cocina?", "فين المطبخ؟")], f"الرد: {lt('Está allí')} = هناك"),
+ "carousel-6": cover(lt("Mi casa tiene ___"), "habitaciones", "", "اكتب عدد غرفك في الكومنتات"),
+ "words": rows("كلمات اليوم", [("البيت", "Casa"), ("المطبخ", "Cocina"), ("الحمام", "Baño"), ("أوضة النوم", "Dormitorio"),
+                               ("الصالون", "Salón"), ("الجنينة", "Jardín")]),
+ "quiz": quiz("«مطبخ» بالإسباني؟", [("A", "Baño"), ("B", "Cocina"), ("C", "Salón")]),
+}
+
 if __name__ == "__main__":
     out = sys.argv[1]
     days = [int(x) for x in sys.argv[2:]] or sorted(DAYS)
