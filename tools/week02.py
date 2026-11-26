@@ -51,6 +51,43 @@ DAYS[9] = {
  "quiz": quiz("«مطبخ» بالإسباني؟", [("A", "Baño"), ("B", "Cocina"), ("C", "Salón")]),
 }
 
+DAYS[10] = {
+ "lesson-1": cover("إيه لون", "عربيتك؟", "بالإسباني", "Los colores"),
+ "lesson-2": cards("اسأل وجاوب", [("¿De qué color es tu coche?", "إيه لون عربيتك؟"), ("Es rojo.", "أحمر")],
+                   f"{lt('color')} = لون"),
+ "lesson-3": rows("الألوان", [("أحمر", "rojo"), ("أزرق", "azul"), ("أخضر", "verde"), ("أصفر", "amarillo")]),
+ "lesson-4": cards("الصفة بعد الاسم", [("el coche rojo", "العربية الحمرا"), ("la casa roja", "البيت الأحمر")],
+                   f"{lt('azul')} و{lt('verde')} ثابتين: {lt('la casa azul')}"),
+ "carousel-1": cover("الألوان", "بالإسباني", "", "اسحب ←"),
+ "carousel-2": rows("1", [("أحمر", "rojo"), ("أزرق", "azul")]),
+ "carousel-3": rows("2", [("أخضر", "verde"), ("أصفر", "amarillo")]),
+ "carousel-4": rows("3", [("أبيض", "blanco"), ("أسود", "negro")]),
+ "carousel-5": cards("اسأل", [("¿De qué color es?", "إيه لونه؟")], f"الرد: {lt('Es verde')} = أخضر"),
+ "carousel-6": cover(lt("Mi color favorito"), lt("es ___"), "", "اكتب لونك المفضل في الكومنتات"),
+ "words": rows("كلمات اليوم", [("أحمر", "Rojo"), ("أزرق", "Azul"), ("أخضر", "Verde"), ("أصفر", "Amarillo"),
+                               ("أبيض", "Blanco"), ("أسود", "Negro")]),
+ "quiz": quiz("«أخضر» بالإسباني؟", [("A", "Rojo"), ("B", "Verde"), ("C", "Azul")]),
+}
+
+DAYS[11] = {
+ "lesson-1": cover("وصّف أي حاجة", "بالإسباني", "", "Los adjetivos"),
+ "lesson-2": cards("وصّف بيتك", [("Mi casa es pequeña, pero muy bonita.", "بيتي صغير بس حلو أوي")],
+                   f"{lt('muy')} = جدًا · {lt('pero')} = لكن"),
+ "lesson-3": rows("صفات أساسية", [("كبير", "grande"), ("صغير", "pequeño / pequeña"), ("جميل", "bonito / bonita"),
+                                  ("جديد", "nuevo / nueva")]),
+ "lesson-4": cards("الصفة بتتبع الاسم", [("el jardín pequeño", "الجنينة الصغيرة"), ("la casa pequeña", "البيت الصغير")],
+                   f"{lt('grande')} ثابتة: {lt('casa grande · jardín grande')}"),
+ "carousel-1": cover("الصفات", "بالإسباني", "", "اسحب ←"),
+ "carousel-2": rows("1", [("كبير", "grande"), ("صغير", "pequeño")]),
+ "carousel-3": rows("2", [("جميل", "bonito"), ("جديد", "nuevo")]),
+ "carousel-4": cards("اسأل", [("¿Cómo es tu casa?", "إيه شكل بيتك؟")], f"الرد: {lt('Es grande')} = كبير"),
+ "carousel-5": cards("زوّد muy", [("muy bonita", "حلوة جدًا"), ("muy grande", "كبير جدًا")], ""),
+ "carousel-6": cover(lt("Mi casa es ___"), "", "", "اكتب صفة بيتك في الكومنتات"),
+ "words": rows("كلمات اليوم", [("كبير", "Grande"), ("صغير", "Pequeño"), ("جميل", "Bonito"), ("جديد", "Nuevo"),
+                               ("جدًا", "Muy"), ("لكن", "Pero")]),
+ "quiz": quiz("«صغير» بالإسباني؟", [("A", "Grande"), ("B", "Pequeño"), ("C", "Nuevo")]),
+}
+
 if __name__ == "__main__":
     out = sys.argv[1]
     days = [int(x) for x in sys.argv[2:]] or sorted(DAYS)
